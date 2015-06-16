@@ -18,6 +18,7 @@
   width: auto;
 }
 
+
   /*Logo Image*/
   .logo-image {
     padding-left: 400px;
@@ -26,6 +27,21 @@
 
 }
 
+@media (min-width: 1200px) and (max-width: 2000px){
+
+  .team-member {
+    margin-bottom: 30px;
+    float : left;
+    margin-left: 100px;
+    margin-right: 140px;
+  }
+
+  .team-member:last-child {
+    margin-bottom: 0;
+    float : left;
+  }
+
+}
 
 /*============================================================
 	Tablet (Portrait) Design for a width of 768px
@@ -188,10 +204,14 @@ background-position: center top !important;
 
 .team-member {
   margin-bottom: 30px;
+  float : left;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .team-member:last-child {
   margin-bottom: 0;
+  float : left;
 }
 
 .member-thumb {
