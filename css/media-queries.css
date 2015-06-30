@@ -41,13 +41,19 @@
     float : left;
   }
 
+  /* works */
+
+  .work-item {
+    width: 33%;
+  }
+
 }
 
 /*============================================================
 	Tablet (Portrait) Design for a width of 768px
 ==============================================================*/
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 
 
 /* slider */
@@ -61,7 +67,7 @@
 }
   /*Logo Image*/
   .logo-image {
-    padding-left: 300px;
+    padding-left: 315px;
     padding-top: 75px;
   }
 
@@ -93,6 +99,18 @@
 }
 
 /* team */
+
+  .team-member {
+    margin-bottom: 30px;
+    float : left;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .team-member:last-child {
+    margin-bottom: 0;
+    float : left;
+  }
 
 .member-thumb .overlay h5 {
   margin: 25px 0;
@@ -285,7 +303,7 @@ background-position: center top !important;
 
   /*Logo Image*/
   .logo-image {
-    padding-left: 200px;
+    padding-left: 115px;
     padding-top: 75px;
   }
 
@@ -293,7 +311,7 @@ background-position: center top !important;
 
 .work-item {
   left: inherit !important;
-  width: 50%;
+  width: 100%;
 }
 
 }

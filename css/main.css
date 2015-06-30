@@ -703,6 +703,10 @@ label.error {
   margin-bottom: 10px;
 }
 
+.footer-social li a:hover {
+    color: #798692;
+}
+
 #map_canvas {
   height: 215px;
   width: 100%;

@@ -135,13 +135,47 @@ $(document).ready(function(){
             scrollTop: 0
         }, 1500, "easeInOutExpo")
     });
-	
+
+    // ========== START FETCH FACEBOOK LIKES ========== //
+
+    function fetchLikeCount(url){
+        return $.Deferred(function(defer){
+            $.ajax({
+                dataType: 'jsonp',
+                url: 'https://api.facebook.com/method/fql.query?callback=callback',
+                data: {
+                    query: 'SELECT like_count FROM link_stat WHERE url="' + url + '"',
+                    format: 'JSON'
+                }
+            }).then(function(res){
+                try{
+                    var count = res[0].like_count;
+                    defer.resolve(count);
+                }catch(e){
+                    reject();
+                }
+            }, reject);
+            function reject(){
+                defer.reject(';(');
+            };
+        }).promise();
+    }
+    $(function(){
+        var $url = "https://www.facebook.com/swaraagstudio";
+        var $res = $('#fblikes');
+            fetchLikeCount($url).always(function(res){
+                //$res.text(res);
+                $res.attr('data-to',res);
+            });
+    });
+    // ========== END FETCH FACEBOOK LIKES ========== //
+
 });
 
 
 // ==========  START GOOGLE MAP ========== //
 function initialize() {
-    var myLatLng = new google.maps.LatLng(22.402789, 91.822156);
+    var myLatLng = new google.maps.LatLng(12.9314913, 77.5497656);
 
     var mapOptions = {
         zoom: 14,
@@ -164,10 +198,17 @@ function initialize() {
         position: myLatLng,
         map: map,
         icon: 'img/location-icon.png',
-        title: '',
+        url: 'https://www.google.co.in/maps/place/@12.931529,77.549775,19z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0'
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        window.open(marker.url);
     });
 
 }
 
 google.maps.event.addDomListener(window, "load", initialize);
+
+
 // ========== END GOOGLE MAP ========== //
+
