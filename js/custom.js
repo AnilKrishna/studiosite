@@ -170,6 +170,14 @@ $(document).ready(function(){
     });
     // ========== END FETCH FACEBOOK LIKES ========== //
 
+    /* ========================================================================= */
+    /*	Copyrights
+    /* ========================================================================= */
+        $(function(){
+            var d = new Date();
+            var $year = d.getFullYear().toString();
+            document.getElementById('copyrightyear').innerHTML = $year;
+        });
 });
 
 
@@ -197,7 +205,7 @@ function initialize() {
     var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
-        icon: 'img/location-icon.png',
+        icon: 'img/location-icon-new3.png',
         url: 'https://www.google.co.in/maps/place/@12.931529,77.549775,19z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0'
     });
 

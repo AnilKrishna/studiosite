@@ -124,7 +124,7 @@ body > section,
 #preloader {
   background-color: #fff;
   height: 100%;
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 1100;
 }
@@ -267,7 +267,7 @@ top: -8px;
 }
 
 .logo-image {
-    padding-left: 550px;
+    padding-left: 500px;
     padding-top: 75px;
 }
 
@@ -709,7 +709,7 @@ label.error {
 
 #map_canvas {
   height: 215px;
-  width: 100%;
+  width: auto;
 }
 
 

@@ -67,8 +67,8 @@
 }
   /*Logo Image*/
   .logo-image {
-    padding-left: 315px;
-    padding-top: 75px;
+    padding-left: 360px;
+    padding-top: 50px;
   }
 
 /* services */
@@ -182,8 +182,8 @@ background-position: center top !important;
 
   /*Logo Image*/
   .logo-image {
-    padding-left: 70px;
-    padding-top: 75px;
+    padding-left: 20px;
+    padding-top: 35px;
   }
 
 .social-links {
@@ -270,6 +270,11 @@ background-position: center top !important;
   margin-bottom: 30px;
 }
 
+  #map_canvas {
+    height: 215px;
+    width: auto;
+  }
+
 }
 
 
@@ -313,5 +318,10 @@ background-position: center top !important;
   left: inherit !important;
   width: 100%;
 }
+
+  #map_canvas {
+    height: 215px;
+    width:auto;
+  }
 
 }
