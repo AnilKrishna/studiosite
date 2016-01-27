@@ -47,6 +47,11 @@
     width: 33%;
   }
 
+  #map_canvas {
+    height: 525px;
+    width: auto;
+  }
+
 }
 
 /*============================================================
@@ -153,6 +158,11 @@ background-position: center top !important;
 .footer-single {
   margin-bottom: 30px;
 }
+
+  #map_canvas {
+    height: 525px;
+    width: auto;
+  }
 
 }
 
