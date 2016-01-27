@@ -31,8 +31,10 @@ a {
             transition: all .3s ease-in 0s;
 }
 
+
+
 iframe {
-    border: 0;
+    border:0;
 }
 
 a, a:focus, a:hover {
@@ -789,6 +791,10 @@ label.error {
 .copyright {
   color: #062033;
   margin-top: 100px;
+}
+
+.customBorder {
+    border: 3px solid #EEE;
 }
 
 #back-top {
